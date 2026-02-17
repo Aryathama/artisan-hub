@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment files (NEVER commit these)
+.env
+.env.local
+.env.production
+.env.*.local
+
+# Editor
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp
+hash.txt
+build_output.txt
+build_log*.txt
