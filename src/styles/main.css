@@ -538,6 +538,24 @@ video {
     padding: 0 var(--space-sm);
     transition: border-color var(--transition-fast);
     overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.input-group .btn-icon {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    padding: var(--space-sm);
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.input-group .btn-icon svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
 }
 
 .input-group:focus-within {
