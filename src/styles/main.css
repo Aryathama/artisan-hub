@@ -439,6 +439,7 @@ video {
     border-radius: var(--radius-sm);
     color: var(--text-muted);
     transition: all var(--transition-fast);
+    flex-shrink: 0;
 }
 
 .btn-icon:hover {
@@ -536,6 +537,7 @@ video {
     border-radius: var(--radius-md);
     padding: 0 var(--space-sm);
     transition: border-color var(--transition-fast);
+    overflow: hidden;
 }
 
 .input-group:focus-within {
@@ -544,6 +546,7 @@ video {
 
 .input-group input {
     flex: 1;
+    min-width: 0;
     background: transparent;
     border: none;
     padding: var(--space-md);
@@ -1502,6 +1505,64 @@ video {
         font-size: 1.5rem;
         padding: 0 var(--space-md);
     }
+
+    /* Teleprompter mobile centering & padding */
+    .prompter-text-area {
+        padding: 10vh var(--space-md) 20vh;
+    }
+
+    /* Buttons wrap text on small screens */
+    .btn-large {
+        padding: var(--space-md) var(--space-md);
+        font-size: var(--font-sm);
+        white-space: normal;
+        word-break: break-word;
+    }
+
+    /* Card header should wrap */
+    .card-header {
+        flex-wrap: wrap;
+        gap: var(--space-sm);
+    }
+
+    /* Photo studio compare container */
+    .compare-container {
+        border-radius: var(--radius-md);
+    }
+
+    /* Upload area smaller padding */
+    .upload-area {
+        padding: var(--space-lg) var(--space-md);
+    }
+
+    /* Modal smaller padding on mobile */
+    .modal-body {
+        padding: var(--space-md);
+    }
+
+    .modal-header {
+        padding: var(--space-md);
+    }
+
+    /* Vault card smaller padding */
+    .vault-card {
+        padding: var(--space-md);
+    }
+
+    .vault-card-header {
+        flex-wrap: wrap;
+        gap: var(--space-xs);
+    }
+
+    /* Archive item actions wrap */
+    .archive-item-actions {
+        flex-wrap: wrap;
+    }
+
+    /* Chat input wrapper */
+    .chat-input-wrapper {
+        border-radius: var(--radius-md);
+    }
 }
 
 @media (max-width: 480px) {
@@ -1511,6 +1572,39 @@ video {
 
     .page-title {
         font-size: var(--font-lg);
+    }
+
+    /* Prompter controls tighter */
+    .prompter-controls {
+        gap: var(--space-sm);
+        padding: var(--space-sm) var(--space-md);
+    }
+
+    .prompter-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    /* Bottom sheet full-width padding */
+    .bottom-sheet-body {
+        padding: var(--space-sm);
+    }
+
+    /* Vault filter bar horizontal scroll */
+    .vault-filter-bar {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .vault-filter-bar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .vault-filter-btn {
+        flex-shrink: 0;
     }
 }
 
